@@ -6,7 +6,7 @@ android {
     compileSdkVersion 34
 
     defaultConfig {
-        applicationId "com.aksaragames.game"
+        applicationId "com.aksaragames.studio"
         
         // Target minimum yang lebih modern
         minSdkVersion 21
