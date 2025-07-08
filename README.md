@@ -1,13 +1,7 @@
 # 🎮 **AksaraGames Studio – Android App**
 
 <p align="center">
-  <img src="https://via.placeholder.com/250x250.png?text=AksaraGames+Logo" alt="Aksara Games Studio Logo" width="200"/>
-</p>
-
-<p align="center">
-  <a href="https://github.com/your-github-username/your-repo/actions/workflows/gradle-publish.yml">
-    <img src="https://github.com/your-github-username/your-repo/actions/workflows/gradle-publish.yml/badge.svg" alt="Android CI Status"/>
-  </a>
+  <img src="https://raw.githubusercontent.com/davenwoody/legenda-tanah-leluhur/refs/heads/main/app/src/main/res/drawable/ic_launcher.png" alt="Aksara Games Studio Logo" width="200"/>
 </p>
 
 ---
