@@ -30,4 +30,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: legenda-tanah-leluhur.apk
-        path: app/build/outputs/apk/debug/final-game.apk
+        path: app/build/outputs/apk/debug/app-debug.apk
