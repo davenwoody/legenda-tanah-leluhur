@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/village_background"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/player_stats_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Level 1"
+        android:textColor="#FFD700"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"/>
+
+    <ImageView
+        android:id="@+id/player_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/player_avatar"
+        android:layout_above="@id/player_stats_text"/>
+
+    <ProgressBar
+        android:id="@+id/player_hp_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/player_image"
+        android:progressTint="#4CAF50"/>
+
+    <ProgressBar
+        android:id="@+id/player_mp_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/player_hp_bar"
+        android:progressTint="#2196F3"/>
+
+    <ImageView
+        android:id="@+id/enemy_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:id="@+id/enemy_hp_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/enemy_image"
+        android:layout_alignLeft="@id/enemy_image"
+        android:progressTint="#F44336"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:id="@+id/text_box_container"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/text_box_background"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/story_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Selamat datang..."
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/main_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/play_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mulai Bermain"/>
+
+        <Button
+            android:id="@+id/settings_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pengaturan"/>
+
+        <Button
+            android:id="@+id/exit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Keluar"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/play_options_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/new_game_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Game Baru"/>
+
+        <Button
+            android:id="@+id/continue_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lanjutkan"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/choices_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/player_image"
+        android:layout_marginLeft="16dp"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/choice_button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilihan 1"/>
+
+        <Button
+            android:id="@+id/choice_button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilihan 2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/combat_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/player_image"
+        android:layout_marginLeft="16dp"
+        android:visibility="gone">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2">
+
+            <Button android:id="@+id/attack_button" android:text="Serang"/>
+            <Button android:id="@+id/skill_button" android:text="Pukulan Batin"/>
+            <Button android:id="@+id/item_button" android:text="Item"/>
+            <Button android:id="@+id/defend_button" android:text="Bertahan"/>
+
+        </GridLayout>
+    </LinearLayout>
+
+</RelativeLayout>
