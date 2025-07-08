@@ -1,24 +1,19 @@
-// Konfigurasi build untuk seluruh proyek
+// Konfigurasi build untuk seluruh proyek.
+// Blok ini HANYA untuk menentukan versi plugin Android, bukan untuk library.
 buildscript {
     repositories {
-        // Alamat "gudang" tempat Gradle mencari plugin dan peralatan
+        // Alamat "gudang" tempat Gradle mencari plugin build
         google()
         mavenCentral()
     }
     dependencies {
         // Menentukan versi Android Gradle Plugin yang akan digunakan
-        // (AIDE biasanya menangani ini otomatis, tapi di sini kita definisikan)
         classpath 'com.android.tools.build:gradle:7.4.2'
     }
 }
 
-allprojects {
-    repositories {
-        // Berlaku untuk semua modul (termasuk :app)
-        google()
-        mavenCentral()
-    }
-}
+// Blok "allprojects" yang menyebabkan error sebelumnya sudah dihapus.
+// Tugasnya sudah diambil alih oleh settings.gradle
 
 task clean(type: Delete) {
     delete rootProject.buildDir
