@@ -7,7 +7,7 @@
 ---
 
 Selamat datang di _AksaraGames Studio Android App_!  
-Proyek ini adalah pondasi aplikasi Android yang dibangun dengan **Gradle** & **Android SDK 29**.  
+Proyek ini adalah pondasi aplikasi Android yang dibangun dengan **Gradle** & **Android SDK 34**.  
 Workflow **GitHub Actions** sudah siap pakai untuk membangun APK secara otomatis setiap kali ada perubahan di cabang `main`.
 
 ## ✨ Fitur Utama
@@ -22,14 +22,14 @@ Workflow **GitHub Actions** sudah siap pakai untuk membangun APK secara otomatis
 ### Prasyarat
 
 1. **JDK 11** atau lebih baru.  
-2. **Android SDK** (API 29 & Build-Tools 29.0.3).  
+2. **Android SDK** (API 34).  
 3. **Gradle 5.6.4** (atau gunakan *wrapper* yang dibuat otomatis oleh IDE).
 
 ### Clone & Build Lokal
 
 ```bash
 # Clone repositori
-$ git clone https://github.com/your-github-username/your-repo.git
+$ git clone https://github.com/davenwood/legenda-tanah-leluhur.git
 $ cd your-repo
 
 # Bila Anda memiliki wrapper, cukup jalankan:
