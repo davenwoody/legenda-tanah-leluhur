@@ -11,21 +11,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Langkah 1: Mengambil kode dari repositori Anda (Sama seperti sebelumnya)
+    # Langkah 1: Mengambil kode dari repositori Anda
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    # Langkah 2: Menggunakan Aksi Gradle yang lebih pintar
-    # Aksi ini akan otomatis menyiapkan Java, cache, dan Gradle untuk kita.
+    # Langkah 2: Menjalankan build dengan versi Gradle yang spesifik
     - name: Set up Gradle and Build
       uses: gradle/gradle-build-action@v2
       with:
-        # Perintah ini sama dengan sebelumnya, tapi sekarang dijalankan oleh Aksi Gradle
+        # BARIS INI KITA TAMBAHKAN UNTUK MEMPERBAIKI ERROR
+        gradle-version: 8.5
+        
+        # Perintah build tetap sama
         arguments: assembleDebug
 
-    # Langkah 3: Mengunggah file APK yang sudah jadi sebagai "Artifact" (Sama seperti sebelumnya)
+    # Langkah 3: Mengunggah file APK yang sudah jadi
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: legenda-tanah-leluhur.apk
-        path: app/build/outputs/apk/debug/final.apk
+        path: app/build/outputs/apk/debug/final-game.apk
